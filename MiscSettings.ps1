@@ -7,3 +7,6 @@ install-windowsfeature "telnet-client"
 $key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
 Set-ItemProperty $key HideFileExt 0
 Stop-Process -processname explorer
+
+#Install dotnet 
+Install-WindowsFeature NET-Framework-Core –Source D:\Sources\SxS
