@@ -14,7 +14,7 @@ function GetFileAndVerify ($f_filepath, $f_filename, $f_filecachelocation, $f_fi
             if(Test-Path $f_filecachelocation -ErrorAction SilentlyContinue)  #Download from Local Share
             {
                 write-host "Get file from local share"
-                copy-item $f_filecachlocation -destination $f_pathOfFile 
+                copy-item $f_pathOfCache -destination $f_pathOfFile 
             }else {
                 write-host "Download the file from web" 
                 wget $f_webDownload -OutFile $f_pathOfFile   
